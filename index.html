@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <!-- Turning off zooming for now -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/base.css" />
+  <title>Timelines</title>
+  <script src="lib/js/modernizr.custom.js"></script>
+</head>
+<body>
+  <div id="masthead">
+    <div id="menu">
+      <ul>
+        <li><a href="https://github.com/cloudfour/offCanvasMenu">GitHub Project</a></li>
+        <li><a href="http://cloudfour.com/">Cloud Four</a></li>
+        <li><a href="http://mobileportland.com/">Mobile Portland</a></li>
+      </ul>
+    </div>
+    <div id="menu-trigger"><a href="#menu">Timelines</a></div>
+  </div>
+  <!-- BEGIN Timeline Embed -->
+  <div id="timeline-embed"></div>
+  <script type="text/javascript" src="lib/js/storyjs-embed.js"></script>
+  <!-- END Timeline Embed-->
+  
+<!-- TODO CONCAT THIS SHIT -->
+<script src="lib/js/fastclick.js"></script>
+<script src="lib/js/jquery-1.9.1.min.js"></script>
+<script src="lib/js/jquery.csswatch.js"></script>
+<script src="lib/js/jquery.offcanvasmenu.js"></script>
+<script src="lib/js/menu.responsive.js"></script>
+<script>
+  // Instantiate the first timeline
+  $(document).ready(function() {
+    createStoryJS({
+      css: "css/timeline.css",
+      js: "lib/js/timeline-min.js",
+      width: "100%",
+      height: "90%",
+      source: 'https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdENXNkxmWjdLZkp6UWk4RzMzTS1SM3c&output=html'
+    });
+  });
+</script>
+</body>
+</html>

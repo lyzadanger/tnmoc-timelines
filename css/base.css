@@ -1,0 +1,125 @@
+/* line 3, scss/base.scss */
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: #4d4d4d;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 100%;
+}
+
+/* line 12, scss/base.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* line 16, scss/base.scss */
+a, a:visited, a:hover, a:active {
+  color: #2b812b;
+  text-decoration: none;
+}
+
+/* */
+/* line 23, scss/base.scss */
+.inner-wrapper, .outer-wrapper {
+  height: 100%;
+}
+
+/* line 27, scss/base.scss */
+#menu {
+  border-left: 1px solid #999999;
+  background-color: #eeeeee;
+  color: #666666;
+}
+
+/* line 33, scss/base.scss */
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 40, scss/base.scss */
+#masthead {
+  background-color: #333333;
+  color: #666666;
+  position: relative;
+  border-bottom: 2px solid #2b812b;
+  height: 2em;
+}
+
+/*
+ * Menu links are block so they'll occupy the full
+ * width (easier to tap)
+ */
+/* line 53, scss/base.scss */
+#menu a {
+  border-bottom: 1px solid #cccccc;
+  color: inherit;
+  display: block;
+  text-decoration: none;
+  padding: 0.75em 0.5em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+/* line 64, scss/base.scss */
+#menu-trigger {
+  background-color: #666666;
+  color: #eeeeee;
+  font-size: 0.75em;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: -1.5em;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 50%;
+}
+
+/* line 77, scss/base.scss */
+#menu-trigger a {
+  color: #eeeeee;
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+/** Media queries! **/
+@media screen and (min-width: 40em) {
+  /* line 86, scss/base.scss */
+  #menu-trigger {
+    display: none;
+  }
+
+  /* line 89, scss/base.scss */
+  #menu {
+    background-color: transparent;
+  }
+  /* line 91, scss/base.scss */
+  #menu ul {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  /* line 96, scss/base.scss */
+  #menu ul li {
+    line-height: 2em;
+    display: inline;
+    padding: 1em 0.5em;
+    height: 100%;
+  }
+  /* line 101, scss/base.scss */
+  #menu ul li:hover {
+    background-color: #2b812b;
+  }
+  /* line 104, scss/base.scss */
+  #menu ul li a {
+    padding: 0;
+    margin: 0 0 0 0;
+    display: inline-block;
+    color: #eeeeee;
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,12 @@
+@import '_variables';
+@import 'modules/_timeline';
+
+.vco-timeline .vco-navigation .timenav-background .timenav-line {
+  background-color: $colorGreen;
+}
+
+#timeline-embed {
+  .content-container {
+    padding-top: 0.5em;
+  }
+}
