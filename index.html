@@ -8,6 +8,7 @@
   <!-- Turning off zooming for now -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
   <title>Timelines</title>
   <script src="lib/js/modernizr.custom.js"></script>
 </head>
@@ -50,20 +51,26 @@
 <script src="lib/js/jquery.csswatch.js"></script>
 <script src="lib/js/jquery.offcanvasmenu.js"></script>
 <script src="lib/js/menu.responsive.js"></script>
+<script src="lib/js/timeline-min.js"></script>
 <script>
   // Instantiate the first timeline
   $(document).ready(function() {
     // TODO: var for source of current timeline
     // so that we don't load the same timeline on top of itself
     function initTimeline(options) {
+      var timeline;
       options = _.extend({
         css: "css/timeline.css",
         js: "lib/js/timeline-min.js",
         width: "100%",
-        height: "90%",
-        debug: false
+        height: "100%",
+        embed_id: 'timeline-embed',
+        debug: true
       }, options || {});
-      createStoryJS(options);
+      //createStoryJS(options);
+      timeline = new VMM.Timeline('timeline-embed', '100%', '90%');
+      timeline.init(options);
+      console.log(timeline);
       $('[data-timeline]').removeClass('is-active');
       $('[href="' + options.source + '"]').addClass('is-active');
     }
@@ -72,7 +79,7 @@
       var source;
       event.preventDefault();
       $('#timeline-embed').unbind().html("");
-      delete(VMM.Timeline); // Hackity hack hack
+      //delete(VMM.Timeline); // Hackity hack hack
       source = $(event.target).attr('href');
       initTimeline({source: source});
     }

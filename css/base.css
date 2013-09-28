@@ -43,7 +43,7 @@ footer nav ul {
 /* line 39, scss/base.scss */
 footer nav ul li {
   padding-top: 0.5em;
-  margin: 0 1em;
+  margin: 0 0.5em;
   display: inline-block;
 }
 /* line 43, scss/base.scss */
@@ -54,7 +54,7 @@ footer nav ul li a, footer nav ul li a:visited {
 
 /* line 51, scss/base.scss */
 .content {
-  height: 90%;
+  height: 100%;
 }
 
 /* line 54, scss/base.scss */
@@ -78,7 +78,7 @@ footer nav ul li a, footer nav ul li a:visited {
 
 /* line 70, scss/base.scss */
 #logo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
