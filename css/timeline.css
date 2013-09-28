@@ -3411,16 +3411,21 @@
   }
 }
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* line 323, scss/modules/_timeline.scss */
+  /* line 325, scss/modules/_timeline.scss */
   .storyjs-embed.full-embed {
     height: 557px !important;
-    width: 92% !important;
-    margin-left: 4% !important;
+    width: 100% !important;
   }
 
-  /* line 323, scss/modules/_timeline.scss */
+  /* line 326, scss/modules/_timeline.scss */
   .storyjs-embed.full-embed .vco-feature {
     height: 356px !important;
+  }
+
+  /* line 327, scss/modules/_timeline.scss */
+  .vco-feature {
+    width: 90%;
+    margin: 0 5%;
   }
 }
 /* line 4, scss/timeline.scss */

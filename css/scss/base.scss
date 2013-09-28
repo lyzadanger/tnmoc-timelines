@@ -23,30 +23,6 @@ a, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-/* */
-
-footer {
-  margin-top: 0.5em;
-  width: 100%;
-  height: 2em;
-  background-color: $colorGrey5;
-  nav ul {
-    width: 100%;
-    font-size: 0.875em;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    li {
-      padding-top: 0.5em;
-      margin: 0 0.5em;
-      display: inline-block;
-      a, a:visited {
-        font-weight: bold;
-        color: $colorGrey1;
-      }
-    }
-  }
-}
 
 .content {
   height: 100%;
