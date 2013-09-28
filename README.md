@@ -21,30 +21,25 @@ You'll need access to the spreadsheet in question, but edits show up real time! 
 
 You'll need to have the app installed locally (see below). Right now, adding a new timeline (or editing/removing an existing one) is handled via these steps:
 
+1. Run `$ grunt serve` so your changes will be seen.
 1. Add metadata about the new timeline to `timelines.json` at the root level of the repo.
 2. Create a new `hbt` (Handlebars Template) file in the `src` directory. Follow the guides of the existing files. The only change necessary is to change the `source` of the timeline that gets initialized in the small JavaScript snippet. You are also welcome to put anything in the `hbt` file you'd like (if you want to differentiate the page the timeline is on).
-3. Run the `grunt hbt` command.
 4. Commit, push, deploy.
 
-Step 2 is lame. I hope to make it better.
+Step 3 is lame. I hope to make it better.
 
 ### Installing and running locally
 
 #### Running local node (connect) server
 
-This is for development...the grunt task will watch for compass/sass changes and recompile.
+This is for development...the grunt task will watch for compass/sass changes and recompile, and will also see any changes to the `hbt`
+files in `src` and rebuild appropriately.
 
 1. Make sure you have the grunt CLI. Try `$ npm install -g grunt-cli`
 2. `$ npm install`
 3. `$ grunt serve`
 
 You can view the site at `localhost:8001`. 
-
-#### Rebuilding HTML pages from HBT files
-
-If you make changes to `timelines.json` or any of the `hbt` or HBT partials in `src`, you want to run:
-
-`$ grunt hbt`
 
 ### Running the Rack webserver locally
 
