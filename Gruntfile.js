@@ -34,6 +34,12 @@ module.exports = function(grunt) {
           'css/**/*.{scss,sass}'
         ],
         tasks: ['compass:dev']
+      },
+      hbt: {
+        files: [
+          'src/**/*.hbt'
+        ],
+        tasks: ['hbt:all']
       }
     },
     hbt: {
@@ -65,7 +71,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'connect',
       'compass:dev',
-      'watch:compass'
+      'watch'
     ]);
   });
 

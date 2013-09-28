@@ -3,11 +3,11 @@
 {{>header}}
 <body>
   {{>main}}
-
 <script>
   $(document).ready(function() {
     TNMOC.initTimeline({ source: '{{ timelines.hardware.source }}' });
   });
 </script>
+
 </body>
 </html>
