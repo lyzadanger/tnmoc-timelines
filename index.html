@@ -18,7 +18,7 @@
     <div id="menu">
       <ul>
         <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdENXNkxmWjdLZkp6UWk4RzMzTS1SM3c&output=html" data-timeline>Women in Computing</a></li>
-        <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdHFINjJLZW1EVDVEaVNEVHZzdmUxLUE&output=html" data-timeline>Gaming</a></li>
+        <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdHFINjJLZW1EVDVEaVNEVHZzdmUxLUE&output=html" data-timeline>Colossus</a></li>
         <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdEZRazBTM3hILUZudHVPWjVDSEpPS1E&output=html" data-timeline>Systems</a></li>
         <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdHp0LUljVWt5c3U4Y3BQbWEwT08xLWc&output=html" data-timeline>Hardware</a></li>
       </ul>
@@ -53,12 +53,13 @@
 <script src="lib/js/menu.responsive.js"></script>
 <script src="lib/js/timeline-min.js"></script>
 <script>
+var timeline;
   // Instantiate the first timeline
   $(document).ready(function() {
+   // var timeline;
     // TODO: var for source of current timeline
     // so that we don't load the same timeline on top of itself
     function initTimeline(options) {
-      var timeline;
       options = _.extend({
         css: "css/timeline.css",
         js: "lib/js/timeline-min.js",
@@ -70,7 +71,6 @@
       //createStoryJS(options);
       timeline = new VMM.Timeline('timeline-embed', '100%', '90%');
       timeline.init(options);
-      console.log(timeline);
       $('[data-timeline]').removeClass('is-active');
       $('[href="' + options.source + '"]').addClass('is-active');
     }
@@ -78,10 +78,14 @@
     function timelineFromElement(event) {
       var source;
       event.preventDefault();
+      console.log(VMM.Timeline);
+      //delete(VMM.Timeline.TimeNav);
       $('#timeline-embed').unbind().html("");
       //delete(VMM.Timeline); // Hackity hack hack
       source = $(event.target).attr('href');
       initTimeline({source: source});
+      console.log(timeline);
+      timeline.reload();
     }
     initTimeline({ source: 'https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdENXNkxmWjdLZkp6UWk4RzMzTS1SM3c&output=html' });
     $('[data-timeline]').click(timelineFromElement);
