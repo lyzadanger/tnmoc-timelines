@@ -35,6 +35,23 @@ module.exports = function(grunt) {
         ],
         tasks: ['compass:dev']
       }
+    },
+    hbt: {
+      all: {
+        options: {
+          data: grunt.file.readJSON('timelines.json'),
+          partials: 'src/partials/*.hbt'
+        },
+        files: [
+          { 
+            cwd: 'src/',
+            src: ['*.hbt'], // Actual pattern(s) to match.
+            expand: true,
+            dest: '',
+            ext: '.html'
+          }
+        ]
+      }
     }
   });
 
@@ -42,6 +59,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-hbt');
 
   grunt.registerTask('serve', function() {
     grunt.task.run([

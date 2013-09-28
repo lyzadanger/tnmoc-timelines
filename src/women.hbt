@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+{{>header}}
+<body>
+  {{>main}}
+
+<script>
+  $(document).ready(function() {
+    TNMOC.initTimeline({ source: '{{ timelines.women.source }}' });
+  });
+</script>
+</body>
+</html>

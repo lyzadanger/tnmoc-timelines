@@ -1,0 +1,34 @@
+  <div id="masthead">
+    <h2>Timelines</h2>
+    <div id="menu">
+      {{>menu}}
+    </div>
+    <div id="menu-trigger"><a href="#menu">Timelines</a></div>
+  </div>
+  <!-- BEGIN Timeline Embed -->
+  <div class="content">
+    <img src="css/tnmoc_logo_mid.gif" id="logo">
+    <div id="timeline-embed"></div>
+  </div>
+  <script type="text/javascript" src="lib/js/storyjs-embed.js"></script>
+  <!-- END Timeline Embed-->
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Visit</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Learn</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+  </footer>
+<!-- TODO CONCAT THIS SHIT -->
+<script src="lib/js/underscore-1.5.2.min.js"></script>
+<script src="lib/js/fastclick.js"></script>
+<script src="lib/js/jquery-1.9.1.min.js"></script>
+<script src="lib/js/jquery.csswatch.js"></script>
+<script src="lib/js/jquery.offcanvasmenu.js"></script>
+<script src="lib/js/menu.responsive.js"></script>
+<script src="lib/js/timeline-min.js"></script>
+<script src="lib/js/tnmoc.js"></script>
