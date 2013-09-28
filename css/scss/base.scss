@@ -1,4 +1,5 @@
 @import "_variables";
+@import "compass/css3/box-shadow";
 
 html, body {
   height: 100%;
@@ -7,6 +8,10 @@ html, body {
   color: $colorGrey1;
   font-family: $fontMain;
   font-size: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +25,32 @@ a, a:visited, a:hover, a:active {
 
 /* */
 
+footer {
+  margin-top: 0.5em;
+  width: 100%;
+  height: 2em;
+  background-color: $colorGrey5;
+  nav ul {
+    width: 100%;
+    font-size: 0.875em;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      padding-top: 0.5em;
+      margin: 0 1em;
+      display: inline-block;
+      a, a:visited {
+        font-weight: bold;
+        color: $colorGrey1;
+      }
+    }
+  }
+}
+
+.content {
+  height: 90%;
+}
 .inner-wrapper, .outer-wrapper {
   height: 100%;
 }
@@ -36,13 +67,23 @@ a, a:visited, a:hover, a:active {
   padding: 0;
 }
 
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
 #masthead {
+  padding-left: 70px;
   background-color: $colorGrey0;
   color: $colorGrey2;
   position: relative;
   border-bottom: 2px solid $colorGreen;
   height: 2em;
+  h2 {
+    display: none;
+  }
 }
 
 /*
@@ -83,6 +124,14 @@ a, a:visited, a:hover, a:active {
 
 /** Media queries! **/
 @media screen and (min-width: 40em) {
+
+  #masthead h2 {
+    display: inline;
+    float: left;
+    margin: 0 .75em;
+    color: $colorGrey3;
+    font-weight: 300;
+  }
   #menu-trigger {
     display : none;
   }
