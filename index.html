@@ -15,9 +15,9 @@
   <div id="masthead">
     <div id="menu">
       <ul>
-        <li><a href="https://github.com/cloudfour/offCanvasMenu">GitHub Project</a></li>
-        <li><a href="http://cloudfour.com/">Cloud Four</a></li>
-        <li><a href="http://mobileportland.com/">Mobile Portland</a></li>
+        <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdHFINjJLZW1EVDVEaVNEVHZzdmUxLUE&output=html" data-timeline>Gaming</a></li>
+        <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdEZRazBTM3hILUZudHVPWjVDSEpPS1E&output=html" data-timeline>Systems</a></li>
+        <li><a href="https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdHp0LUljVWt5c3U4Y3BQbWEwT08xLWc&output=html" data-timeline>Hardware</a></li>
       </ul>
     </div>
     <div id="menu-trigger"><a href="#menu">Timelines</a></div>
@@ -28,6 +28,7 @@
   <!-- END Timeline Embed-->
   
 <!-- TODO CONCAT THIS SHIT -->
+<script src="lib/js/underscore-1.5.2.min.js"></script>
 <script src="lib/js/fastclick.js"></script>
 <script src="lib/js/jquery-1.9.1.min.js"></script>
 <script src="lib/js/jquery.csswatch.js"></script>
@@ -36,13 +37,29 @@
 <script>
   // Instantiate the first timeline
   $(document).ready(function() {
-    createStoryJS({
-      css: "css/timeline.css",
-      js: "lib/js/timeline-min.js",
-      width: "100%",
-      height: "90%",
-      source: 'https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdENXNkxmWjdLZkp6UWk4RzMzTS1SM3c&output=html'
-    });
+    // TODO: var for source of current timeline
+    // so that we don't load the same timeline on top of itself
+    function initTimeline(options) {
+      options = _.extend({
+        css: "css/timeline.css",
+        js: "lib/js/timeline-min.js",
+        width: "100%",
+        height: "90%",
+        debug: false
+      }, options || {});
+      createStoryJS(options);
+    }
+    // Initialize another timeline from a click/tap
+    function timelineFromElement(event) {
+      var source;
+      event.preventDefault();
+      $('#timeline-embed').html("");
+      delete(VMM.Timeline);
+      source = $(event.target).attr('href');
+      initTimeline({source: source});
+    }
+    initTimeline({ source: 'https://docs.google.com/spreadsheet/pub?key=0AtTdKRbUS8FPdENXNkxmWjdLZkp6UWk4RzMzTS1SM3c&output=html' });
+    $('[data-timeline]').click(timelineFromElement);
   });
 </script>
 </body>
