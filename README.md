@@ -1,5 +1,7 @@
 # Over the Air Hack Challenge
 
+## Timelines App for The National Museum of Computing
+
 This is a standalone, static website, currently deployed [on Heroku](http://tnmoc.herokuapp.com). It allows for the creation of media-rich timelines for museum exhibit content. The aims are:
 
 * Simplicity
@@ -51,8 +53,10 @@ You need to have Ruby and the Bundler gem installed. See also [documentation on 
 1. `$ bundle install`
 2. `$ rackup`
 
+You can view the site at `localhost:9292`. This is a preview of what the site will look like when deployed (at least at present) on Heroku. This uses `Rack::Static`.
+
+
+
 ### Deployment
 
 Talk to me.
-You can view the site at `localhost:9292`. This is a preview of what the site will look like when deployed (at least at present) on Heroku. This uses `Rack::Static`.
-
