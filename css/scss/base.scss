@@ -99,6 +99,9 @@ footer {
   padding: 0.75em 0.5em;
   text-transform: lowercase;
   font-variant: small-caps;
+  &.is-active {
+    background-color: transparentize($colorGreen, 0.3);
+  }
 }
 
 
@@ -145,18 +148,18 @@ footer {
       li {
         line-height: 2em;
         display: inline;
-        padding: 1em 0.5em;
+        padding: 1em 0;
+        margin: 0;
         height: 100%;
-        &:hover {
-          background-color: $colorGreen;
-        }
         a {
-          padding: 0;
+          padding: 0 1em;
           margin: 0 0 0 0;
           display: inline-block;
           color: $colorGrey5;
           border-bottom: none;
-
+          &:hover {
+            background-color: $colorGreen;
+          }
         }
       }
     }

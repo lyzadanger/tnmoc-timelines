@@ -64,6 +64,8 @@
         debug: false
       }, options || {});
       createStoryJS(options);
+      $('[data-timeline]').removeClass('is-active');
+      $('[href="' + options.source + '"]').addClass('is-active');
     }
     // Initialize another timeline from a click/tap
     function timelineFromElement(event) {

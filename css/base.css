@@ -112,8 +112,12 @@ footer nav ul li a, footer nav ul li a:visited {
   text-transform: lowercase;
   font-variant: small-caps;
 }
+/* line 102, scss/base.scss */
+#menu a.is-active {
+  background-color: rgba(43, 129, 43, 0.7);
+}
 
-/* line 105, scss/base.scss */
+/* line 108, scss/base.scss */
 #menu-trigger {
   background-color: #666666;
   color: #eeeeee;
@@ -127,7 +131,7 @@ footer nav ul li a, footer nav ul li a:visited {
   top: 50%;
 }
 
-/* line 118, scss/base.scss */
+/* line 121, scss/base.scss */
 #menu-trigger a {
   color: #eeeeee;
   display: block;
@@ -137,7 +141,7 @@ footer nav ul li a, footer nav ul li a:visited {
 
 /** Media queries! **/
 @media screen and (min-width: 40em) {
-  /* line 128, scss/base.scss */
+  /* line 131, scss/base.scss */
   #masthead h2 {
     display: inline;
     float: left;
@@ -146,39 +150,40 @@ footer nav ul li a, footer nav ul li a:visited {
     font-weight: 300;
   }
 
-  /* line 135, scss/base.scss */
+  /* line 138, scss/base.scss */
   #menu-trigger {
     display: none;
   }
 
-  /* line 138, scss/base.scss */
+  /* line 141, scss/base.scss */
   #menu {
     background-color: transparent;
   }
-  /* line 140, scss/base.scss */
+  /* line 143, scss/base.scss */
   #menu ul {
     list-style-type: none;
     display: inline;
     padding: 0;
     margin: 0;
   }
-  /* line 145, scss/base.scss */
+  /* line 148, scss/base.scss */
   #menu ul li {
     line-height: 2em;
     display: inline;
-    padding: 1em 0.5em;
+    padding: 1em 0;
+    margin: 0;
     height: 100%;
   }
-  /* line 150, scss/base.scss */
-  #menu ul li:hover {
-    background-color: #2b812b;
-  }
-  /* line 153, scss/base.scss */
+  /* line 154, scss/base.scss */
   #menu ul li a {
-    padding: 0;
+    padding: 0 1em;
     margin: 0 0 0 0;
     display: inline-block;
     color: #eeeeee;
     border-bottom: none;
+  }
+  /* line 160, scss/base.scss */
+  #menu ul li a:hover {
+    background-color: #2b812b;
   }
 }
