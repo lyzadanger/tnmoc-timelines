@@ -71,7 +71,7 @@
     function timelineFromElement(event) {
       var source;
       event.preventDefault();
-      $('#timeline-embed').html("");
+      $('#timeline-embed').unbind().html("");
       delete(VMM.Timeline); // Hackity hack hack
       source = $(event.target).attr('href');
       initTimeline({source: source});
