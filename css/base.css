@@ -54,29 +54,30 @@ footer nav ul li a, footer nav ul li a:visited {
 
 /* line 51, scss/base.scss */
 .content {
-  height: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-/* line 54, scss/base.scss */
+/* line 55, scss/base.scss */
 .inner-wrapper, .outer-wrapper {
   height: 100%;
 }
 
-/* line 58, scss/base.scss */
+/* line 59, scss/base.scss */
 #menu {
   border-left: 1px solid #999999;
   background-color: #eeeeee;
   color: #666666;
 }
 
-/* line 64, scss/base.scss */
+/* line 65, scss/base.scss */
 #menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 70, scss/base.scss */
+/* line 71, scss/base.scss */
 #logo {
   position: absolute;
   top: 0;
@@ -84,7 +85,7 @@ footer nav ul li a, footer nav ul li a:visited {
   z-index: 1000;
 }
 
-/* line 77, scss/base.scss */
+/* line 78, scss/base.scss */
 #masthead {
   padding-left: 70px;
   background-color: #333333;
@@ -93,7 +94,7 @@ footer nav ul li a, footer nav ul li a:visited {
   border-bottom: 2px solid #2b812b;
   height: 2em;
 }
-/* line 84, scss/base.scss */
+/* line 85, scss/base.scss */
 #masthead h2 {
   display: none;
 }
@@ -102,7 +103,7 @@ footer nav ul li a, footer nav ul li a:visited {
  * Menu links are block so they'll occupy the full
  * width (easier to tap)
  */
-/* line 94, scss/base.scss */
+/* line 95, scss/base.scss */
 #menu a {
   border-bottom: 1px solid #cccccc;
   color: inherit;
@@ -112,12 +113,12 @@ footer nav ul li a, footer nav ul li a:visited {
   text-transform: lowercase;
   font-variant: small-caps;
 }
-/* line 102, scss/base.scss */
+/* line 103, scss/base.scss */
 #menu a.is-active {
   background-color: rgba(43, 129, 43, 0.7);
 }
 
-/* line 108, scss/base.scss */
+/* line 109, scss/base.scss */
 #menu-trigger {
   background-color: #666666;
   color: #eeeeee;
@@ -131,7 +132,7 @@ footer nav ul li a, footer nav ul li a:visited {
   top: 50%;
 }
 
-/* line 121, scss/base.scss */
+/* line 122, scss/base.scss */
 #menu-trigger a {
   color: #eeeeee;
   display: block;
@@ -141,7 +142,7 @@ footer nav ul li a, footer nav ul li a:visited {
 
 /** Media queries! **/
 @media screen and (min-width: 40em) {
-  /* line 131, scss/base.scss */
+  /* line 132, scss/base.scss */
   #masthead h2 {
     display: inline;
     float: left;
@@ -150,23 +151,23 @@ footer nav ul li a, footer nav ul li a:visited {
     font-weight: 300;
   }
 
-  /* line 138, scss/base.scss */
+  /* line 139, scss/base.scss */
   #menu-trigger {
     display: none;
   }
 
-  /* line 141, scss/base.scss */
+  /* line 142, scss/base.scss */
   #menu {
     background-color: transparent;
   }
-  /* line 143, scss/base.scss */
+  /* line 144, scss/base.scss */
   #menu ul {
     list-style-type: none;
     display: inline;
     padding: 0;
     margin: 0;
   }
-  /* line 148, scss/base.scss */
+  /* line 149, scss/base.scss */
   #menu ul li {
     line-height: 2em;
     display: inline;
@@ -174,7 +175,7 @@ footer nav ul li a, footer nav ul li a:visited {
     margin: 0;
     height: 100%;
   }
-  /* line 154, scss/base.scss */
+  /* line 155, scss/base.scss */
   #menu ul li a {
     padding: 0 1em;
     margin: 0 0 0 0;
@@ -182,7 +183,7 @@ footer nav ul li a, footer nav ul li a:visited {
     color: #eeeeee;
     border-bottom: none;
   }
-  /* line 160, scss/base.scss */
+  /* line 161, scss/base.scss */
   #menu ul li a:hover {
     background-color: #2b812b;
   }

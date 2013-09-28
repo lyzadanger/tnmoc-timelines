@@ -3310,7 +3310,7 @@
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar .zoom-in .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3320,7 +3320,7 @@
     height: 24px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar .zoom-out .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3330,7 +3330,7 @@
     height: 24px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar .back-home .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3340,7 +3340,7 @@
     height: 24px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar.touch .zoom-in .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3350,7 +3350,7 @@
     height: 40px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar.touch .zoom-out .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3360,7 +3360,7 @@
     height: 40px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .vco-toolbar.touch .back-home .icon {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3370,7 +3370,7 @@
     height: 40px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .timenav .content .marker .flag:hover {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3380,7 +3380,7 @@
     height: 53px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .timenav .content .marker .flag-small:hover {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3390,7 +3390,7 @@
     height: 53px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .timenav .content .marker .flag-small.flag-small-last:hover {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3400,7 +3400,7 @@
     height: 26px;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 321, scss/modules/_timeline.scss */
   .vco-notouch .vco-navigation .timenav-background .timenav-indicator {
     background-image: url(timeline@2x.png?v4.4);
     background-size: 352px 260px;
@@ -3411,27 +3411,16 @@
   }
 }
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 323, scss/modules/_timeline.scss */
   .storyjs-embed.full-embed {
     height: 557px !important;
-    width: 320px !important;
+    width: 92% !important;
+    margin-left: 4% !important;
   }
 
-  /* line 319, scss/modules/_timeline.scss */
+  /* line 323, scss/modules/_timeline.scss */
   .storyjs-embed.full-embed .vco-feature {
     height: 356px !important;
-  }
-}
-@media screen and (max-device-width: 480px) and (orientation: landscape) {
-  /* line 319, scss/modules/_timeline.scss */
-  .storyjs-embed.full-embed {
-    height: 409px !important;
-    width: 480px !important;
-  }
-
-  /* line 319, scss/modules/_timeline.scss */
-  .storyjs-embed.full-embed .vco-feature {
-    height: 208px !important;
   }
 }
 /* line 4, scss/timeline.scss */
